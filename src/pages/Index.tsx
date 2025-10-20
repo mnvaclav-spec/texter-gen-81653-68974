@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { FileText, Copy, Download, Loader2, Volume2, Mic, ThumbsUp, ThumbsDown, Settings, MessageCircle, Users, LogOut, Moon, Sun, Home, Menu } from "lucide-react";
-import backgroundImage from "@/assets/tech-background.jpg";
+import heroBackground from "@/assets/hero-background.png";
 import ChatBot from "@/components/ChatBot";
 import VersionHistory from "@/components/VersionHistory";
 import { useTheme } from "next-themes";
@@ -327,12 +327,12 @@ const Index = () => {
       <section 
         className="relative h-[400px] overflow-hidden"
         style={{
-          backgroundImage: `url(${backgroundImage})`,
+          backgroundImage: `url(${heroBackground})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background" />
         <div className="relative container mx-auto h-full flex flex-col items-center justify-center text-center px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Hi there, Tech Explorer!
