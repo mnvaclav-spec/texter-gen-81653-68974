@@ -332,22 +332,25 @@ const Index = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/20 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/20 to-purple-900/60" />
         <div className="relative container mx-auto h-full flex flex-col items-center justify-center text-center px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
             Hi there, Tech Explorer!
           </h2>
-          <p className="text-xl md:text-2xl text-primary font-semibold mb-2">
+          <p className="text-xl md:text-2xl text-white font-semibold mb-2 drop-shadow-lg">
             Ready to turn your ideas into professional docs?
           </p>
-          <p className="text-lg text-muted-foreground max-w-2xl">
+          <p className="text-lg text-white/90 max-w-2xl drop-shadow-md">
             Choose a template type and let TechDocGen do the rest. Making tech simple for everyone.
           </p>
         </div>
       </section>
 
+      {/* Purple gradient blend section */}
+      <div className="h-32 bg-gradient-to-b from-purple-900/60 via-purple-600/30 to-background"></div>
+
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-4 py-12 -mt-20">
         {/* Version History */}
         <div className="mb-6">
           <VersionHistory />
