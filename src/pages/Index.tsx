@@ -332,7 +332,7 @@ const Index = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background" />
         <div className="relative container mx-auto h-full flex flex-col items-center justify-center text-center px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Hi there, Tech Explorer!
