@@ -262,13 +262,25 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen bg-background">
+    <div 
+      className="min-h-screen relative"
+      style={{
+        backgroundImage: `url(${heroBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      {/* Purple overlay for entire page */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/70 via-blue-900/60 to-indigo-900/70 pointer-events-none"></div>
+      
+      <div className="relative z-10">
       {/* Header with Navigation */}
-      <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-40 border-b border-white/10 bg-black/30 backdrop-blur-md">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <FileText className="h-8 w-8 text-primary" />
-            <h1 className="text-2xl font-bold">
+            <FileText className="h-8 w-8 text-white" />
+            <h1 className="text-2xl font-bold text-white">
               TechDoc<span className="text-primary">Gen</span>
             </h1>
           </div>
@@ -323,16 +335,8 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section with Background */}
-      <section 
-        className="relative h-[400px] overflow-hidden"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/20 to-purple-900/60" />
+      {/* Hero Section */}
+      <section className="relative h-[400px] overflow-hidden">
         <div className="relative container mx-auto h-full flex flex-col items-center justify-center text-center px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
             Hi there, Tech Explorer!
@@ -346,11 +350,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Purple gradient blend section */}
-      <div className="h-32 bg-gradient-to-b from-purple-900/60 via-purple-600/30 to-background"></div>
-
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-12 -mt-20">
+      <main className="container mx-auto px-4 py-12">
         {/* Version History */}
         <div className="mb-6">
           <VersionHistory />
@@ -358,16 +359,16 @@ const Index = () => {
 
         <div className="grid gap-6 lg:grid-cols-2">
           {/* Input Section */}
-          <Card>
+          <Card className="bg-white/10 backdrop-blur-md border-white/20">
             <CardHeader>
-              <CardTitle>Create Documentation</CardTitle>
-              <CardDescription>
+              <CardTitle className="text-white">Create Documentation</CardTitle>
+              <CardDescription className="text-white/80">
                 Configure your documentation settings
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="template">Template Type</Label>
+                <div className="space-y-2">
+                  <Label htmlFor="template" className="text-white">Template Type</Label>
                 <Select value={selectedTemplate} onValueChange={setSelectedTemplate}>
                   <SelectTrigger id="template">
                     <SelectValue placeholder="Choose a documentation type" />
@@ -382,9 +383,9 @@ const Index = () => {
                 </Select>
               </div>
 
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <Label htmlFor="input">Your Input</Label>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <Label htmlFor="input" className="text-white">Your Input</Label>
                   <Button
                     variant="outline"
                     size="sm"
@@ -404,9 +405,9 @@ const Index = () => {
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="audience">Audience</Label>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="audience" className="text-white">Audience</Label>
                   <Select value={audience} onValueChange={setAudience}>
                     <SelectTrigger id="audience">
                       <SelectValue />
@@ -419,8 +420,8 @@ const Index = () => {
                   </Select>
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="detail">Detail Level</Label>
+                  <div className="space-y-2">
+                    <Label htmlFor="detail" className="text-white">Detail Level</Label>
                   <Select value={detailLevel} onValueChange={setDetailLevel}>
                     <SelectTrigger id="detail">
                       <SelectValue />
@@ -434,9 +435,9 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="format">Format</Label>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="format" className="text-white">Format</Label>
                   <Select value={format} onValueChange={setFormat}>
                     <SelectTrigger id="format">
                       <SelectValue />
@@ -448,8 +449,8 @@ const Index = () => {
                   </Select>
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="language">Language</Label>
+                  <div className="space-y-2">
+                    <Label htmlFor="language" className="text-white">Language</Label>
                   <Select value={language} onValueChange={setLanguage}>
                     <SelectTrigger id="language">
                       <SelectValue />
@@ -483,18 +484,18 @@ const Index = () => {
           </Card>
 
           {/* Output Section */}
-          <Card>
+          <Card className="bg-white/10 backdrop-blur-md border-white/20">
             <CardHeader>
-              <CardTitle>Generated Documentation</CardTitle>
-              <CardDescription>
+              <CardTitle className="text-white">Generated Documentation</CardTitle>
+              <CardDescription className="text-white/80">
                 Your AI-generated documentation will appear here
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               {generatedDoc ? (
                 <>
-                  <div className="bg-muted rounded-lg p-4 min-h-[400px] max-h-[600px] overflow-y-auto">
-                    <pre className="whitespace-pre-wrap text-sm">{generatedDoc}</pre>
+                  <div className="bg-black/30 backdrop-blur-sm rounded-lg p-4 min-h-[400px] max-h-[600px] overflow-y-auto border border-white/10">
+                    <pre className="whitespace-pre-wrap text-sm text-white">{generatedDoc}</pre>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
@@ -516,8 +517,8 @@ const Index = () => {
                     </Button>
                   </div>
 
-                  <div className="border-t pt-4">
-                    <p className="text-sm text-muted-foreground mb-2">Was this helpful?</p>
+                  <div className="border-t border-white/20 pt-4">
+                    <p className="text-sm text-white/80 mb-2">Was this helpful?</p>
                     <div className="flex gap-2">
                       <Button
                         variant={feedback === "positive" ? "default" : "outline"}
@@ -539,15 +540,15 @@ const Index = () => {
                   </div>
 
                   {feedback && (
-                    <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 text-sm">
-                      <p className="text-primary font-medium">✅ Keep learning — the future is digital! 💻✨</p>
+                    <div className="bg-primary/20 border border-primary/30 rounded-lg p-4 text-sm backdrop-blur-sm">
+                      <p className="text-white font-medium">✅ Keep learning — the future is digital! 💻✨</p>
                     </div>
                   )}
                 </>
               ) : (
-                <div className="bg-muted rounded-lg p-12 text-center text-muted-foreground min-h-[400px] flex items-center justify-center">
+                <div className="bg-black/20 backdrop-blur-sm rounded-lg p-12 text-center text-white/70 min-h-[400px] flex items-center justify-center border border-white/10">
                   <div>
-                    <FileText className="h-12 w-12 mx-auto mb-4 opacity-50" />
+                    <FileText className="h-12 w-12 mx-auto mb-4 opacity-50 text-white" />
                     <p>Your documentation will appear here</p>
                   </div>
                 </div>
@@ -557,10 +558,10 @@ const Index = () => {
         </div>
 
         {/* Support Section */}
-        <Card className="mt-8">
+        <Card className="mt-8 bg-white/10 backdrop-blur-md border-white/20">
           <CardContent className="pt-6 text-center">
-            <p className="text-sm text-muted-foreground mb-2">Need help or have questions?</p>
-            <Button variant="outline" asChild>
+            <p className="text-sm text-white/80 mb-2">Need help or have questions?</p>
+            <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
               <a href="mailto:support@capaciti.org">Contact Capaciti Support</a>
             </Button>
           </CardContent>
@@ -568,12 +569,13 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t py-8 mt-12">
-        <div className="container mx-auto px-4 text-center text-sm text-muted-foreground space-y-2">
+      <footer className="border-t border-white/10 py-8 mt-12 bg-black/20 backdrop-blur-sm">
+        <div className="container mx-auto px-4 text-center text-sm text-white/80 space-y-2">
           <p className="font-semibold">Powered by Capaciti | Developed by the Digital Pioneers Team, 2025</p>
           <p>Empowering learners through smart, inclusive tech documentation</p>
         </div>
       </footer>
+      </div>
 
       {/* Chatbot */}
       <ChatBot currentTemplate={selectedTemplate} currentInput={input} />
