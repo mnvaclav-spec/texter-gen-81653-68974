@@ -338,10 +338,10 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative h-[400px] overflow-hidden">
         <div className="relative container mx-auto h-full flex flex-col items-center justify-center text-center px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-glow mb-4">
             Hi there, Tech Explorer!
           </h2>
-          <p className="text-xl md:text-2xl text-white font-semibold mb-2 drop-shadow-lg">
+          <p className="text-xl md:text-2xl text-white font-semibold mb-2 text-outline">
             Ready to turn your ideas into professional docs?
           </p>
           <p className="text-lg text-white/90 max-w-2xl drop-shadow-md">
@@ -361,7 +361,7 @@ const Index = () => {
           {/* Input Section */}
           <Card className="bg-white/10 backdrop-blur-md border-white/20">
             <CardHeader>
-              <CardTitle className="text-white">Create Documentation</CardTitle>
+              <CardTitle className="text-white text-glow">Create Documentation</CardTitle>
               <CardDescription className="text-white/80">
                 Configure your documentation settings
               </CardDescription>
@@ -486,7 +486,7 @@ const Index = () => {
           {/* Output Section */}
           <Card className="bg-white/10 backdrop-blur-md border-white/20">
             <CardHeader>
-              <CardTitle className="text-white">Generated Documentation</CardTitle>
+              <CardTitle className="text-white text-glow">Generated Documentation</CardTitle>
               <CardDescription className="text-white/80">
                 Your AI-generated documentation will appear here
               </CardDescription>
