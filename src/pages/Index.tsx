@@ -262,7 +262,7 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 dark:from-purple-950 dark:via-blue-950 dark:to-indigo-950">
       {/* Header with Navigation */}
       <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -347,7 +347,7 @@ const Index = () => {
       </section>
 
       {/* Purple gradient blend section */}
-      <div className="h-32 bg-gradient-to-b from-purple-900/60 via-purple-600/30 to-background"></div>
+      <div className="h-32 bg-gradient-to-b from-purple-900/60 via-purple-600/40 to-transparent"></div>
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12 -mt-20">
