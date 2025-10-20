@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { FileText, Copy, Download, Loader2, Volume2, Mic, ThumbsUp, ThumbsDown, Settings, MessageCircle, Users, LogOut, Moon, Sun, Home, Menu } from "lucide-react";
+import { FileText, Copy, Download, Loader2, Volume2, Mic, ThumbsUp, ThumbsDown, Settings, MessageCircle, Users, LogOut, Moon, Sun, Home, Menu, Mail, ExternalLink, Sparkles } from "lucide-react";
 import heroBackground from "@/assets/hero-background.png";
 import ChatBot from "@/components/ChatBot";
 import VersionHistory from "@/components/VersionHistory";
@@ -477,7 +477,10 @@ const Index = () => {
                     Generating...
                   </>
                 ) : (
-                  "Generate Documentation"
+                  <>
+                    <Sparkles className="mr-2 h-4 w-4" />
+                    Generate Documentation
+                  </>
                 )}
               </Button>
             </CardContent>
@@ -562,7 +565,11 @@ const Index = () => {
           <CardContent className="pt-6 text-center">
             <p className="text-sm text-white/80 mb-2">Need help or have questions?</p>
             <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
-              <a href="mailto:support@capaciti.org">Contact Capaciti Support</a>
+              <a href="mailto:support@capaciti.org" target="_blank" rel="noopener noreferrer">
+                <Mail className="mr-2 h-4 w-4" />
+                Contact Capaciti Support
+                <ExternalLink className="ml-2 h-3 w-3" />
+              </a>
             </Button>
           </CardContent>
         </Card>
