@@ -22,7 +22,7 @@ const ChatBot = ({ currentTemplate, currentInput }: ChatBotProps) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hi there! 👋 I'm Elon, your AI assistant. I'm here to help you create amazing technical documentation. What would you like to create today?",
+      content: "Hi there! 👋 I'm Elon, your AI assistant from Capaciti's Digital Pioneers team. I'm here to help you create amazing technical documentation. How can I help you document your project today? Keep learning — the future is digital! 💻✨",
     },
   ]);
   const [inputValue, setInputValue] = useState("");
