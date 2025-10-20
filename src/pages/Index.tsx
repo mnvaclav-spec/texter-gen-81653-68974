@@ -336,120 +336,107 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[500px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 dark:from-purple-900/20 dark:via-pink-900/20 dark:to-blue-900/20">
-        <div className="container relative z-10 mx-auto px-4 text-center py-20">
-          <div className="inline-flex items-center gap-2 bg-white/50 dark:bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-purple-200 dark:border-purple-700">
-            <Sparkles className="h-4 w-4 text-purple-600 dark:text-purple-400" />
-            <span className="text-sm font-medium text-purple-900 dark:text-purple-100">Powered by AI - Built for Everyone</span>
+      <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-900/20 via-pink-900/20 to-blue-900/20">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background"></div>
+        <div className="container mx-auto px-4 py-20 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm">
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Powered by AI - Built for Everyone</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-pink-400 to-blue-400 bg-clip-text text-transparent">
+              Generate Documentation in Seconds
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-foreground/80 max-w-2xl mx-auto">
+              Transform your technical content into beautiful, accessible documentation with AI-powered generation
+            </p>
+
+            <div className="flex gap-4 justify-center">
+              <Button size="lg" className="gap-2 bg-primary hover:bg-primary/90" onClick={() => navigate('/auth')}>
+                Start Creating <ArrowRight className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
-          <h1 className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-transparent">
-            TechDocGen
-          </h1>
-          <p className="text-xl md:text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
-            Your AI-powered documentation assistant
-          </p>
-          <p className="text-base mb-8 max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
-            Meet <strong>Elon</strong>, your friendly AI assistant from Capaciti's Digital Pioneers team. 
-            Create technical documentation that's clear, accessible, and inclusive.
-          </p>
-          <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8">
-            Start Creating
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      {/* Documentation Made Simple */}
+      <section className="py-20 bg-card/50 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-3 text-gray-900 dark:text-white">Documentation Made Simple</h2>
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-12">
-            Generate professional technical documentation in seconds
-          </p>
-          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="w-14 h-14 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mx-auto mb-4">
-                  <FileText className="h-7 w-7 text-purple-600 dark:text-purple-400" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">API Guides</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Create comprehensive API documentation</p>
-              </CardContent>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-foreground">Documentation Made Simple</h2>
+            <p className="text-xl text-foreground/70">Everything you need to create professional docs</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="p-6 hover:shadow-xl transition-all bg-card/80 backdrop-blur border-border/50 hover:border-primary/50">
+              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
+                <FileText className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-foreground">API Guides</h3>
+              <p className="text-foreground/70">Comprehensive API documentation generated automatically</p>
             </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="w-14 h-14 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mx-auto mb-4">
-                  <Code className="h-7 w-7 text-purple-600 dark:text-purple-400" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Code Comments</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Generate clear code explanations</p>
-              </CardContent>
+            <Card className="p-6 hover:shadow-xl transition-all bg-card/80 backdrop-blur border-border/50 hover:border-primary/50">
+              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
+                <Code className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-foreground">Code Comments</h3>
+              <p className="text-foreground/70">Clear explanations for every function and method</p>
             </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="w-14 h-14 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mx-auto mb-4">
-                  <Wrench className="h-7 w-7 text-purple-600 dark:text-purple-400" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Setup Instructions</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Step-by-step installation guides</p>
-              </CardContent>
+            <Card className="p-6 hover:shadow-xl transition-all bg-card/80 backdrop-blur border-border/50 hover:border-primary/50">
+              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
+                <Wrench className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-foreground">Setup Instructions</h3>
+              <p className="text-foreground/70">Step-by-step guides for getting started</p>
             </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="w-14 h-14 rounded-xl bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mx-auto mb-4">
-                  <BookOpen className="h-7 w-7 text-purple-600 dark:text-purple-400" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Troubleshooting</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Problem-solving documentation</p>
-              </CardContent>
+            <Card className="p-6 hover:shadow-xl transition-all bg-card/80 backdrop-blur border-border/50 hover:border-primary/50">
+              <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
+                <BookOpen className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-foreground">Troubleshooting</h3>
+              <p className="text-foreground/70">Common issues and solutions documented clearly</p>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Accessibility Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      {/* Built for Accessibility */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-3 text-gray-900 dark:text-white">Built for Accessibility</h2>
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-12">
-            Inclusive features for every user
+          <h2 className="text-4xl font-bold mb-4 text-foreground text-center">Built for Accessibility</h2>
+          <p className="text-xl text-foreground/70 text-center mb-12">
+            Making documentation accessible to everyone
           </p>
-          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="w-14 h-14 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mx-auto mb-4">
-                  <Volume2 className="h-7 w-7 text-orange-600 dark:text-orange-400" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Text-to-Speech</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Listen to documentation</p>
-              </CardContent>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="p-6 hover:shadow-xl transition-all bg-card/80 backdrop-blur border-border/50 hover:border-orange-500/50">
+              <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                <Volume2 className="w-6 h-6 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-foreground">Text-to-Speech</h3>
+              <p className="text-foreground/70">Listen to documentation read aloud in natural voice</p>
             </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="w-14 h-14 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mx-auto mb-4">
-                  <Mic className="h-7 w-7 text-orange-600 dark:text-orange-400" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Voice Input</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Speak your requests</p>
-              </CardContent>
+            <Card className="p-6 hover:shadow-xl transition-all bg-card/80 backdrop-blur border-border/50 hover:border-orange-500/50">
+              <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                <Mic className="w-6 h-6 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-foreground">Voice Input</h3>
+              <p className="text-foreground/70">Create documentation using voice commands</p>
             </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="w-14 h-14 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mx-auto mb-4">
-                  <Languages className="h-7 w-7 text-orange-600 dark:text-orange-400" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">Multi-Language</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">12 languages supported</p>
-              </CardContent>
+            <Card className="p-6 hover:shadow-xl transition-all bg-card/80 backdrop-blur border-border/50 hover:border-orange-500/50">
+              <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                <Languages className="w-6 h-6 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-foreground">Multi-Language</h3>
+              <p className="text-foreground/70">Support for multiple languages and translations</p>
             </Card>
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="w-14 h-14 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mx-auto mb-4">
-                  <Contrast className="h-7 w-7 text-orange-600 dark:text-orange-400" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">High Contrast</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Accessible design modes</p>
-              </CardContent>
+            <Card className="p-6 hover:shadow-xl transition-all bg-card/80 backdrop-blur border-border/50 hover:border-orange-500/50">
+              <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                <Contrast className="w-6 h-6 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-foreground">High Contrast</h3>
+              <p className="text-foreground/70">Enhanced visibility for better readability</p>
             </Card>
           </div>
         </div>
